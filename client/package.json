@@ -2,6 +2,7 @@
   "name": "cryptoAppCo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://https://just-riko.github.io/cryptoAppCo",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -25,7 +26,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +50,7 @@
   },
   "devDependencies": {
     "@types/react-js-pagination": "^3.0.4",
+    "gh-pages": "^5.0.0",
     "sass": "^1.58.3"
   }
 }
