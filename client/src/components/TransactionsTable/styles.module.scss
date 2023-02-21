@@ -1,0 +1,8 @@
+@import "../../styles/variables";
+
+.table {
+  width: $full-size;
+  font-family: $montserrat;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}

@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+@import "../../styles/exports";
+
+.footer {
+  background-color: $secondary-color;
+  width: $full-size;
+  height: 5rem;
+  position: absolute;
+  bottom: 0;
+
+  .content {
+    @extend %content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $primary-text-color;
+    font-family: $montserrat;
+    height: 100%;
+    
+    h2 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+  }
+}
