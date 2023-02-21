@@ -1,10 +1,11 @@
-import { IServerResponse } from '../types/server.types';
+import { IServerResponse } from "../types/server.types";
 
 export const createResponse = (data: any): IServerResponse => {
-  return ({
+  return {
     success: true,
-    data
-  });
+    data,
+  };
 };
 
-export const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+export const delay = (ms: number) =>
+  new Promise((resolve) => setTimeout(resolve, ms));

@@ -1,5 +1,6 @@
 import express, { Express } from "express";
 import * as dotenv from "dotenv";
+import cors from "cors";
 import { AppRouter } from "./routers";
 import { errorHandler } from "./middlewares/errorHandler.middleware";
 import connectDB from "./config/database";
@@ -14,6 +15,8 @@ connectDB();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(cors());
 
 const router = new AppRouter(app);
 router.init();

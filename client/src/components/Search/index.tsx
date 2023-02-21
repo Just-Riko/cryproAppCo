@@ -9,12 +9,13 @@ import { useTransactions } from "../../hooks/useTransactions";
 import { Triangle } from "react-loader-spinner";
 
 export const Search = () => {
-  const { values, handleChange, setFieldValue, submitForm } = useFormikContext<SearchValues>();
+  const { values, handleChange, setFieldValue, submitForm } =
+    useFormikContext<SearchValues>();
   const { isFetching } = useTransactions();
 
   const [isSelectorOpen, setIsSelectorOpen] = useState(false);
 
-  const toggleSelector = () => setIsSelectorOpen(prev => !prev);
+  const toggleSelector = () => setIsSelectorOpen((prev) => !prev);
 
   const selectValue = (idx: number) => () => {
     setFieldValue("selector", idx);
@@ -34,22 +35,33 @@ export const Search = () => {
 
         <div className={styles.selector}>
           {selectVariants[values.selector]}
-          <img src={openArrow} onClick={toggleSelector} className={isSelectorOpen && styles.rotate} />
+          <img
+            src={openArrow}
+            onClick={toggleSelector}
+            className={isSelectorOpen && styles.rotate}
+          />
         </div>
-        {isSelectorOpen && <ul className={styles.selectionList}>
-          {selectVariants.map((i, idx) => {
-            if (idx !== values.selector) return <li key={`selector-${idx}`} onClick={selectValue(idx)}>{i}</li>
-          })}
-        </ul>}
+        {isSelectorOpen && (
+          <ul className={styles.selectionList}>
+            {selectVariants.map((i, idx) => {
+              if (idx !== values.selector)
+                return (
+                  <li key={`selector-${idx}`} onClick={selectValue(idx)}>
+                    {i}
+                  </li>
+                );
+            })}
+          </ul>
+        )}
       </div>
 
       <button type="submit" onClick={submitForm} className={styles.button}>
-        {isFetching ? <Triangle
-          height="30"
-          width="30"
-          color="#fff"
-        /> : <img src={searchIcon} />}
+        {isFetching ? (
+          <Triangle height="30" width="30" color="#fff" />
+        ) : (
+          <img src={searchIcon} />
+        )}
       </button>
     </div>
   );
-}
+};

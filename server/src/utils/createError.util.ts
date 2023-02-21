@@ -1,16 +1,16 @@
-import { IServerResponse } from './../types/server.types';
+import { IServerResponse } from "./../types/server.types";
 
 export class CreateError extends Error {
   status: number;
   data: IServerResponse;
 
   constructor(status: number, message: string) {
-    super()
+    super();
     this.status = status;
     this.data = {
       success: false,
-      message
-    }
+      message,
+    };
   }
 
   static badRequest(message: string) {

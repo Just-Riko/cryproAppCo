@@ -1,4 +1,4 @@
-import joi from 'joi';
+import joi from "joi";
 
 export const joiTransactionRequest = joi.object().keys({
   transactionId: joi.string(),

@@ -16,7 +16,7 @@ function App() {
         refetchOnMount: false,
         refetchOnWindowFocus: false,
         refetchOnReconnect: true,
-      }
+      },
     },
   });
 
