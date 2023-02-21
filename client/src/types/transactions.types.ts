@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 export type SearchValues = {
-  value: string,
+  value: string;
   selector: number;
-}
+};
 
 export interface ITransactionsFilter {
   transactionId?: string;
@@ -12,29 +12,31 @@ export interface ITransactionsFilter {
 }
 
 export interface ITransaction {
-  _id: string,
-  blockNumber: number,
-  transactionId: string,
-  value: number,
-  gas: number,
-  timestamp: number,
-  r: string,
-  s: string
+  _id: string;
+  blockNumber: number;
+  transactionId: string;
+  value: number;
+  gas: number;
+  timestamp: number;
+  r: string;
+  s: string;
 }
 
 export interface ITransactionsResponse {
-  success: boolean,
+  success: boolean;
   data: {
-    count: number,
-    pages: number,
-    currentBlock: number,
-    data: ITransaction[],
-  }
+    count: number;
+    pages: number;
+    currentBlock: number;
+    data: ITransaction[];
+  };
 }
 
 export interface ITransactionProvider {
   page: number;
   setPage: React.Dispatch<React.SetStateAction<number>>;
   filter: ITransactionsFilter | undefined;
-  setFilter: React.Dispatch<React.SetStateAction<ITransactionsFilter | undefined>>;
+  setFilter: React.Dispatch<
+    React.SetStateAction<ITransactionsFilter | undefined>
+  >;
 }

@@ -10,20 +10,22 @@ export const PageCarousel = () => {
     return null;
   }
 
-  return <div className={styles.carousel}>
-    <Pagination
-      prevPageText={<PrevArrow active={page > 0} />}
-      nextPageText={<NextArrow active={data.data.pages > page + 1} />}
-      linkClassPrev={styles.nav}
-      linkClassNext={styles.nav}
-      linkClass={styles.button}
-      activeLinkClass={styles.active}
-      activePage={page + 1}
-      itemsCountPerPage={10}
-      totalItemsCount={data.data.count}
-      pageRangeDisplayed={5}
-      onChange={changePage}
-      hideFirstLastPages
-    />
-  </div>
-}
+  return (
+    <div className={styles.carousel}>
+      <Pagination
+        prevPageText={<PrevArrow active={page > 0} />}
+        nextPageText={<NextArrow active={data.data.pages > page + 1} />}
+        linkClassPrev={styles.nav}
+        linkClassNext={styles.nav}
+        linkClass={styles.button}
+        activeLinkClass={styles.active}
+        activePage={page + 1}
+        itemsCountPerPage={10}
+        totalItemsCount={data.data.count}
+        pageRangeDisplayed={5}
+        onChange={changePage}
+        hideFirstLastPages
+      />
+    </div>
+  );
+};

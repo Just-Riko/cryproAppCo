@@ -14,7 +14,12 @@ export class CryptoManager {
   }
 
   findTransactionsInDB(filter: ITransactionRequest, page: number) {
-    return this.model.find(filter).limit(transactionsOnPage).skip(page * transactionsOnPage).exec();
+    return this.model
+      .find(filter)
+      .limit(transactionsOnPage)
+      .skip(page * transactionsOnPage)
+      .sort({ timestamp: "desc" })
+      .exec();
   }
 
   saveTransactionsInDB(transactions: ITransaction[]) {

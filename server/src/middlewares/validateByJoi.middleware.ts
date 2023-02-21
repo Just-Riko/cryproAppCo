@@ -7,7 +7,7 @@ export const validateTransactionRequest = async (
   res: Response,
   next: NextFunction
 ) => {
-  const target = req.body;
+  const target = req.query;
   const joiError = joiTransactionRequest.validate(target).error;
 
   if (joiError) {

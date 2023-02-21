@@ -1,5 +1,5 @@
-declare module '*.scss';
+declare module "*.scss";
 
-declare module '*.svg' {
-  export default '' as string;
+declare module "*.svg" {
+  export default "" as string;
 }

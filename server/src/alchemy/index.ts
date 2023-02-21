@@ -8,7 +8,11 @@ const settings = {
 
 const alchemy = new Alchemy(settings);
 
-export const getCurrentBlockNumber = async () => await alchemy.core.getBlockNumber();
-export const getCurrentBlockNumberHex = async () => `0x${(await alchemy.core.getBlockNumber()).toString(16)}`;
+export const getCurrentBlockNumber = async () =>
+  await alchemy.core.getBlockNumber();
 
-export const getBlockTransactionReceipts = async (blockNumber: string) => await alchemy.core.getTransactionReceipts({ blockNumber });
+export const getCurrentBlockNumberHex = async () =>
+  `0x${(await alchemy.core.getBlockNumber()).toString(16)}`;
+
+export const getBlockTransactionReceipts = async (blockNumber: string) =>
+  await alchemy.core.getTransactionReceipts({ blockNumber });

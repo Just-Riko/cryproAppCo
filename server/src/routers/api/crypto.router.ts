@@ -13,7 +13,4 @@ cryptoRouter.get(
   trySend(cryptoController.getTransactions)
 );
 
-cryptoRouter.post(
-  "/load-block/",
-  trySend(cryptoController.loadBlock)
-);
+cryptoRouter.post("/load-block/", trySend(cryptoController.loadBlock));

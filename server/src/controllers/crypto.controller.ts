@@ -3,10 +3,13 @@ import { cryptoService } from "../services/crypto.service";
 
 class CryptoController {
   async getTransactions(req: Request) {
-    const transactionFilters = req.body;
+    const transactionFilters = req.query;
     const page = +req.params.page;
 
-    return await cryptoService.getTransactionByFilters(transactionFilters, page);
+    return await cryptoService.getTransactionByFilters(
+      transactionFilters,
+      page
+    );
   }
 
   async loadBlock() {
