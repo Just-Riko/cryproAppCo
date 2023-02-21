@@ -1,0 +1,13 @@
+@import "./variables";
+
+.list {
+  width: $full-size;
+  display: grid;
+  grid-template-columns: $table-grid-columns;
+  background-color: white;
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1px;
+}

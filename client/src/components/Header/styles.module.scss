@@ -1,0 +1,16 @@
+@import "./../../styles/variables";
+@import "./../../styles/exports";
+
+.header {
+  width: $full-size;
+  background-color: $primary-color;
+
+  .content {
+    @extend %content;
+    padding: 1rem 0 1.2rem 0;
+
+    .title {
+      @extend %mainTitle;
+    }
+  }
+}

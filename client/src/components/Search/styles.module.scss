@@ -1,0 +1,103 @@
+@import "./../../styles/variables";
+@import "./../../styles/exports";
+
+%selector {
+  font-family: $montserrat;
+  font-size: 0.9rem;
+  padding: 0 1rem;
+}
+
+.content {
+  display: flex;
+  padding-top: 1.5rem;
+}
+
+.input {
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 0.8rem 1.2rem;
+  font-family: $montserrat;
+
+  &::placeholder {
+    color: #979797;
+    font-family: $montserrat;
+    font-style: italic;
+    font-size: 1rem;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.bordered {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  border: $border;
+  width: fit-content;
+  position: relative;
+}
+
+.selector {
+  @extend %selector;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left: $border;
+  margin: 0.3rem 0;
+  width: 9rem;
+
+  img {
+    cursor: pointer;
+  }
+
+  .rotate {
+    transform: rotate(180deg);
+  }
+}
+
+.selectionList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  width: 11rem;
+  right: 0;
+  position: absolute;
+  top: 3.1rem;
+  border-radius: 10px;
+  border: $border;
+  overflow: hidden;
+  background-color: #ffffff;
+
+  li {
+    @extend %selector;
+    padding: 1rem;
+    cursor: pointer;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &:hover {
+      background-color: $primary-color;
+      color: $primary-text-color;
+    }
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 10px;
+  background-color: $primary-color;
+  padding: 0 1rem;
+  margin-left: 0.8rem;
+  cursor: pointer;
+  width: 3.5rem;
+}

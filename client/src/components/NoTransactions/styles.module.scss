@@ -1,0 +1,14 @@
+@import "../../styles/variables";
+
+.wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $full-size;
+  height: 50%;
+  left: 0;
+  font-family: $montserrat;
+  font-size: 1.4rem;
+  z-index: -1;
+}

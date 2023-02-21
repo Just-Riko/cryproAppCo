@@ -1,0 +1,10 @@
+@import "./../../styles/variables";
+@import "./../../styles/exports";
+
+.wrapper {
+  width: $full-size;
+}
+
+.content {
+  @extend %content;
+}
